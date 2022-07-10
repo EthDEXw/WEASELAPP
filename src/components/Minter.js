@@ -109,7 +109,7 @@ function Minter() {
     const params = {
       to: info.contractJSON.address,
       from: info.account,
-      data: info.contract.methods.cost().encodeABI(),
+      data: info.contract.methods._getCost(info.account).encodeABI(),
     };
     try {
       const result = await window.ethereum.request({
@@ -154,7 +154,7 @@ function Minter() {
         ...prevState,
         loading: false,
         status:
-          "Nice! Your NFT will show up on Opensea, once the transaction is successful.",
+          "Nice! Your NFT will show up on the marketplace, once the transaction is successful.",
       }));
       getSupply();
     } catch (err) {
@@ -263,7 +263,7 @@ function Minter() {
             </p>
             <p className="statusText">
               We've sold out! .You can still buy and trade the {contract.name}{" "}
-              on marketplaces such as Opensea.
+              on marketplaces such as Ebisu's Bay.
             </p>
           </div>
         )}
