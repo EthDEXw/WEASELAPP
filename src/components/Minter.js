@@ -109,7 +109,7 @@ function Minter() {
     const params = {
       to: info.contractJSON.address,
       from: info.account,
-      data: info.contract.methods.getCost(info.account).encodeABI(),
+      data: info.contract.methods._getCost(info.account).encodeABI(),
     };
     try {
       const result = await window.ethereum.request({
@@ -298,7 +298,7 @@ function Minter() {
           className="_90"
           target="_blank"
           rel="noreferrer"
-          href="https://cronoscan.com/token/0x4F80a39A185E4bDbbc545f697E0E17C1982931B1"
+          href="https://cronoscan.com/token/0x4FA54951e105604BEf2A91bC8288f9D74741e250"
         >
           View Contract
         </a>
