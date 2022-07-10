@@ -154,7 +154,9 @@ function Minter() {
         ...prevState,
         loading: false,
         status:
-          "Nice! Your NFT will show up on the marketplace, once the transaction is successful.",
+        "Nice! Your NFT will show up on Opensea, once the transaction is successful."+
+        "\n"+
+        "Transaction hash: "+txHash,
       }));
       getSupply();
     } catch (err) {
@@ -207,7 +209,7 @@ function Minter() {
               }}
             >
               <button
-                disabled={!info.connected || mintInfo.cost == "0"}
+                disabled={!info.connected}
                 className="small_button"
                 onClick={() => updateAmount(mintInfo.amount - 1)}
               >
@@ -215,7 +217,7 @@ function Minter() {
               </button>
               <div style={{ width: 10 }}></div>
               <button
-                disabled={!info.connected || mintInfo.cost == "0"}
+                disabled={!info.connected}
                 className="button"
                 onClick={() => mint()}
               >
@@ -223,7 +225,7 @@ function Minter() {
               </button>
               <div style={{ width: 10 }}></div>
               <button
-                disabled={!info.connected || mintInfo.cost == "0"}
+                disabled={!info.connected}
                 className="small_button"
                 onClick={() => updateAmount(mintInfo.amount + 1)}
               >
@@ -295,6 +297,7 @@ function Minter() {
           }}
           className="_90"
           target="_blank"
+          rel="noreferrer"
           href="https://cronoscan.com/token/0x4F80a39A185E4bDbbc545f697E0E17C1982931B1"
         >
           View Contract
