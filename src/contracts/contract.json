@@ -5,7 +5,7 @@
   "chain_symbol": "CRO",
   "chain": "Cronos",
   "chain_id": 25,
-  "address": "0x90778c0005Eb6ed3c4a29a274741A56dC054f572",
+  "address": "0x07BEa69887Ce393F91b3D5697bADB53b92367C71",
   "abi": [
     {
       "inputs": [
@@ -476,6 +476,19 @@
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "genesis",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "internalType": "uint256",
@@ -521,25 +534,6 @@
     {
       "inputs": [],
       "name": "maxSupply",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "minted",
       "outputs": [
         {
           "internalType": "uint256",

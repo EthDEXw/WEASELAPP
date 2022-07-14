@@ -298,7 +298,7 @@ function Minter() {
           className="_90"
           target="_blank"
           rel="noreferrer"
-          href="https://cronoscan.com/token/0x90778c0005Eb6ed3c4a29a274741A56dC054f572"
+          href="https://cronoscan.com/token/0x07BEa69887Ce393F91b3D5697bADB53b92367C71"
         >
           
         </a>
